@@ -1,0 +1,11 @@
+<%= render :partial => "top" %>
+
+<% for posts in @posts %>
+  <div id="posts">
+    <div id="list_post">
+	  | <%=link_to "Destroy", { :action => "destroy", :id => posts.id } %> 
+	  | <%=link_to "Edit", { :action => "edit", :id => posts.id } %> 
+	  | <i> <%= posts.title %> </i>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<%= render :partial => "top" %>
+<div id="post">
+<% form_for :post, @post, :url => { :action => "edit_post" } do |f| %>
+  <%= f.hidden_field :id, :value => @post.id %>  
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit "Update this post" %>
+  </p>
+<% end %>
+</div>

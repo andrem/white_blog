@@ -1,0 +1,36 @@
+* {
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	list-style:none;
+	font-family:Tahoma, Helvetica, Geneva, sans-serif;
+}
+
+body {
+	background: #FFF;
+}
+
+h1, h2, h3, h4 {
+	font-size:x-large;
+	font-style:normal;
+	font-weight:bold;
+	color:black;
+	width:auto;
+	display: block;
+	padding: 0px;
+
+}
+
+input[type="text"], input[type="password"], textarea {
+	border: 1px solid black;
+	padding: 10px;
+	background: #EEE;
+	font-weight:bold;
+	color: #646363;
+	font-size: x-larger;
+	letter-spacing: 2px;
+}
+
+input[type="submit"] {
+	padding:10px;
+}

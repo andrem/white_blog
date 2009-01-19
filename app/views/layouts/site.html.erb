@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="language" content="pt-br" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<title>The White Blog</title>
+	  <%= stylesheet_link_tag 'base' %>
+	  <%= stylesheet_link_tag 'site' %>
+
+</head>
+<body>
+<div id="left">
+	<% post = Post.all %>
+	<h2>More ....</h2>
+
+	<% for post in post %>
+		<%= link_to post.title, { :action => "read", :id => post.id } %>
+		<br />
+	<% end %>
+
+	<br /><br />
+	<%= link_to "Home", root_path %> <br />
+	<%=link_to "Admin", "/admin/blog/login" %>
+</div>
+<div id="corpo">
+
+	<%= yield %>
+</div>
+
+</body>
+</html>
+
+	

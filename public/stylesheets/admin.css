@@ -1,0 +1,47 @@
+#login {
+	width: 500px;
+	margin:auto;
+	padding:10px;
+	font-style:normal;
+}
+
+#error {
+	margin:auto;
+	padding: 10px;
+	text-align:center;
+	width:100%;
+	color: #FF0000;
+}
+
+#top {
+	width: 100%;
+	border-bottom: 1px solid #000;
+	padding:10px;
+}
+
+#top a {
+	letter-spacing: 4px;
+	color: #000;
+	padding:4px;
+}
+
+#top a:hover {
+	text-decoration:underline;
+}
+
+#post {
+	width:700px;
+	margin:auto;
+	padding:10px;
+}
+
+#list_post {
+	border-bottom:1px dotted #C1C1C1;
+	padding:20px;
+	margin-bottom:10px;
+}
+
+#posts {
+	width: 500px;
+	margin:auto;
+}

@@ -1,0 +1,42 @@
+#corpo {
+	width: 500px;
+	margin-left:50px;
+	padding:2px;
+}
+
+#left {
+	margin-left:600px;
+	float:right;
+	padding:2px;
+   width: 200px;
+   
+}
+
+a {
+	color: #636060;
+}
+
+a:hover {
+ color: #922828;
+}
+
+a:visited {
+	color: #D70303;
+}
+
+#comment {
+ border-top: 1px dotted #c1c1c1;
+ padding: 4px;
+}
+
+.text {
+	border-left:1px solid #C1C1C1;
+	font-style: italic;
+	margin-left: 5px;
+	padding: 2px;
+}
+
+i {
+	color: #C1C1C1;
+	font-size: 90%;
+}

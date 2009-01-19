@@ -1,0 +1,22 @@
+<%= render :partial => "top" %>
+<br />
+<div id="post">
+<% form_for :post, @post, :url => { :action => "add_post_new" } do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :user_id, :value => session[:uid] %>
+ <p>
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+ </p>
+ <br />
+ <p>
+  <%= f.label :Post %><br />
+  <%= f.text_area :text %>
+ </p>
+ <p>
+  <%= f.submit "Add this post" %>
+ </p>
+<% end %>
+
+</div>
+

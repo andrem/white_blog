@@ -1,0 +1,16 @@
+<%= '<div id="error">' + @auth_error + '</div>' if @auth_error %>
+<div id="login">
+<h1> Admin Access </h1>
+<br />
+<% form_tag(:action => 'login') do %>
+
+  <label>Login: </label>
+  <%= text_field_tag :login, params[:login] %>
+   <br />
+  <label>Password: </label><%= password_field_tag :password, params[:password] %>
+	<br /><br />
+  <%= submit_tag "log in >>" %>
+<% end %>
+<br />
+<%= link_to "<< Back to home", root_path %>
+</div>

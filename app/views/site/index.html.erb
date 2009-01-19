@@ -1,0 +1,46 @@
+ <h1> <%= @posts.title %> </h1>
+		 <i> <%= @user.first_name %> <%= @user.last_name %> </i>
+ <br />
+ <p>
+   <%= @posts.text.gsub(/\n/,'<br />') %>
+ </p>
+ <br /><br />
+ <h2> Comments </h2>
+ <br />
+
+ <div id="comment">
+ <% for comments in @comments %>
+  Name: <%= mail_to comments.email, comments.name %>
+  <i><%= comments.created_at %></i>
+  <br />
+  <div class="text">
+ 	<%= comments.comment.gsub(/\n/, '<br />') %>
+  </div>
+  <br /><br />
+ <% end %>
+  </div>
+  
+ <h2> Add Comment <h2>
+ <br />
+ <% form_for :comment, @comment, :url => { :action => "add_comment_for_post" } do |f| %>
+   <%= f.hidden_field :post_id, :value => @posts.id %>
+   <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+   </p>
+   <p>
+    <%= f.label :email %><br />
+	<%= f.text_field :email %>
+	</p>
+   <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+   </p>
+   <br />
+  <p>
+    <%= f.submit "Add comment for this post" %>
+   </p>
+
+
+ <br />
+ <% end %>
